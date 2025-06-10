@@ -87,7 +87,7 @@ def create_restaurant_pizza():
         return make_response(jsonify(response_data), 201)
         
     except ValueError as e:
-        return make_response(jsonify({"errors": [str(e)]}), 400)
+        return make_response(jsonify({"errors": ["validation errors"]}), 400)
     except Exception as e:
         return make_response(jsonify({"errors": ["validation errors"]}), 400)
 
